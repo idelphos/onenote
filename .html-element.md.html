@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>/var/www/html/adelphos/.html-element.md.html</title>
+
+<link href="/var/www/html/adelphos/markdown1.css" media="all" rel="stylesheet" type="text/css"/> 
+
+
+
+<script type="text/javascript">
+
+function getDocumentScrollTop() 
+{
+   var res = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+   // alert(res);
+   return res;
+}
+
+function setDocumentScrollTop(ypos) 
+{
+	window.scrollTo(0, ypos);
+}
+
+</script>
+
+
+</head>
+<body class="markdown-body">
+<h1> <a id="user-content-html-element" class="anchor" href="#html-element" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HTML element</h1> 
+<h3> <a id="user-content-introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>introduction</h3> 
+<p>HTML中的元素大体被分为三种类型</p> 
+<ul> 
+ <li>inline element:行内元素，也称内联元素</li> 
+ <li>block element :块元素</li> 
+ <li>可变元素: 可变元素为根据上下文语境决定该元素为块元素或者内联元素, 也称内联块状元素</li> 
+</ul> 
+<p><code>a{display:block;}</code>　此代码将内联元素a转换为块状元素</p> 
+<h3> <a id="user-content-inline-element" class="anchor" href="#inline-element" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>inline element</h3> 
+<h3> <a id="user-content-block-element" class="anchor" href="#block-element" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>block element</h3> 
+<ol> 
+ <li>每个块级元素都从新的一行开始，并且其后的元素也另起一行,独占一行</li> 
+ <li>元素的高度、宽度、行高以及顶和底边距都可设置</li> 
+ <li>元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致）</li> 
+</ol> 
+<h3> <a id="user-content-inline-element-1" class="anchor" href="#inline-element-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>inline element</h3> 
+<ul> 
+ <li>a - 锚点</li> 
+ <li>abbr - 缩写</li> 
+ <li>acronym - 首字</li> 
+ <li>b - 粗体(不推荐)</li> 
+ <li>bdo - bidi override</li> 
+ <li>big - 大字体</li> 
+ <li>br - 换行</li> 
+ <li>cite - 引用</li> 
+ <li>code - 计算机代码(在引用源码的时候需要)</li> 
+ <li>dfn - 定义字段</li> 
+ <li>em - 强调</li> 
+ <li>font - 字体设定(不推荐)</li> 
+ <li>i - 斜体</li> 
+ <li>img - 图片</li> 
+ <li>input - 输入框</li> 
+ <li>kbd - 定义键盘文本</li> 
+ <li>label - 表格标签</li> 
+ <li>q - 短引用</li> 
+ <li>s - 中划线(不推荐)</li> 
+ <li>samp - 定义范例计算机代码</li> 
+ <li>select - 项目选择</li> 
+ <li>small - 小字体文本</li> 
+ <li>span - 常用内联容器，定义文本内区块</li> 
+ <li>strike - 中划线</li> 
+ <li>strong - 粗体强调</li> 
+ <li>sub - 下标</li> 
+ <li>sup - 上标</li> 
+ <li>textarea - 多行文本输入框</li> 
+ <li>tt - 电传文本</li> 
+ <li>u - 下划线</li> 
+ <li>var - 定义变量</li> 
+</ul> 
+<h3> <a id="user-content-block-element-1" class="anchor" href="#block-element-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>block element</h3> 
+<ul> 
+ <li>address - 地址</li> 
+ <li>blockquote - 块引用</li> 
+ <li>center - 举中对齐块</li> 
+ <li>dir - 目录列表</li> 
+ <li>div - 常用块级容易，也是css layout的主要标签</li> 
+ <li>dl - 定义列表</li> 
+ <li>fieldset - form控制组</li> 
+ <li>form - 交互表单</li> 
+ <li>h1 - 大标题</li> 
+ <li>h2 - 副标题</li> 
+ <li>h3 - 3级标题</li> 
+ <li>h4 - 4级标题</li> 
+ <li>h5 - 5级标题</li> 
+ <li>h6 - 6级标题</li> 
+ <li>hr - 水平分隔线</li> 
+ <li>isindex - input prompt</li> 
+ <li>menu - 菜单列表</li> 
+ <li>noframes - frames可选内容，(对于不支持frame的浏览器显示此区块内容</li> 
+ <li>noscript - )可选脚本内容(对于不支持script的浏览器显示此内容)</li> 
+ <li>ol - 排序表单</li> 
+ <li>p - 段落</li> 
+ <li>pre - 格式化文本</li> 
+ <li>table - 表格</li> 
+ <li>ul - 非排序列表</li> 
+</ul> 
+<h3> <a id="user-content-内联块状元素" class="anchor" href="#%E5%86%85%E8%81%94%E5%9D%97%E7%8A%B6%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>内联块状元素</h3> 
+<ul> 
+ <li>applet - java applet</li> 
+ <li>button - 按钮</li> 
+ <li>del - 删除文本</li> 
+ <li>iframe - inline frame</li> 
+ <li>ins - 插入的文本</li> 
+ <li>map - 图片区块(map)</li> 
+ <li>object - object对象</li> 
+ <li>script - 客户端脚本</li> 
+</ul>
+</body>
+</html>

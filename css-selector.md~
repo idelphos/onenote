@@ -1,0 +1,67 @@
+#selector 
+
+
+###元素选择器
+`h1{font-size:20px;color:red;}`
+
+###ID 选择器
+`#stressid{color:red;}`  
+`<p>到了<span id="stressid">三年级</span>`
+
+###class选择器
+` .stress{color:red;}`  
+`  <p>到了<span class="stress">三年级</span>下学期</p>`  
+`.bigsize{font-size:25px}`  
+`<p>到了<span class="stress bigsize">三年级</span>`
+
+###ID selector 与 class selector比较
+1. ID选择器只能在文档中使用一次
+2. 可以使用类选择器词列表方法为一个元素同时设置多个样式,而ID selector不可以
+
+###子选择器
+`.food>li{border:1px solid red;}`
+这会使类名为food下的子元素li 加入红色实绩边框  
+.food>li{border:1px solid red;}
+ > <ul class="food">
+    <li>水果
+        <ul>
+          <li>香蕉</li>
+            <li>苹果</li>
+            <li>梨</li>
+        </ul>
+    </li>
+    <li>蔬菜
+      <ul>
+          <li>白菜</li>
+            <li>油菜</li>
+            <li>卷心菜</li>
+        </ul>
+    </li>
+</ul>
+
+
+###包含(后代)选择器 child selector
+.first span{color:red;}   类名后加入空格，用于选择指定标签元素下的后辈元素
+
+请注意这个选择器与子选择器的区别，子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于所有子后代元素,多于二层的相同元素嵌套。后代选择器通过空格来进行选择，而子选择器是通过“>”进行选择。  
+总结：>作用于元素的第一代后代，空格作用于元素的所有后代
+
+
+###通用选择器
+* {color:red;} 它匹配HTML中所有的标签元素
+
+
+###伪类选择器
+它给HTML不存在的标签设置样式
+a:hover{color:red;font-size:18px;}  鼠标滑过a标签时样式的改变
+
+
+###分组选择器
+>h1{color:red;}
+span{color:red;} 
+可以缩写成
+h1,span{color:red;}
+
+
+###refer
+
