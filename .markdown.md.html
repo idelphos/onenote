@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>/var/www/html/adelphos/.markdown.md.html</title>
+<title>/home/yadelph/bdisk/mygit/onenote/.markdown.md.html</title>
 
 <link href="/var/www/html/adelphos/markdown1.css" media="all" rel="stylesheet" type="text/css"/> 
 
@@ -38,7 +38,7 @@ function setDocumentScrollTop(ypos)
 </ul> 
 <h3> <a id="user-content-markdown基础语法" class="anchor" href="#markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>markdown基础语法</h3> 
 <p>*,-,+ 3个符号效果都一样，这3个符号被称为 Markdown符号 空白行表示另起一个段落 `是表示inline代码，tab是用来标记 代码段，分别对应html的code，pre标签</p> 
-<pre><code>单一段落( &lt;p&gt;) 用一个空白行
+<pre><code>单一段落( &lt;p&gt;) 用一个或多个空白行
 连续两个空格 会变成一个 &lt;br&gt;
 连续3个符号，然后是空行，表示 hr横线
 </code></pre> 
@@ -52,16 +52,26 @@ function setDocumentScrollTop(ypos)
 </ol> 
 <p>Here is an example of AppleScript:</p> 
 <h3> <a id="user-content-特殊字符自动转换-" class="anchor" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>特殊字符自动转换&lt; &amp;　\</h3> 
-<p>HTML中的两个字符(&lt; &amp;)需要特别处理，&lt;用于标签，&amp;用于标记HTML实体。 markdown可以让人自然地书写字符，它会根据语境自动决定是否转换：<br /> markdown code 范围内，无论是行内还是区块，&lt; 和 ＆ 都一定会被转换成 HTML 实体 markdown使用\来转义，表示文本中markdown符号</p> 
+<p>HTML中的两个字符(&lt; &amp;)需要特别处理，&lt;用于标签，&amp;用于标记HTML实体。 markdown可以让人自然地书写字符，它会根据语境自动决定是否转换：<br /> markdown code 范围内，无论是行内还是区块，&lt; 和 ＆ 都一定会被转换成 HTML 实体 markdown使用\来转义，表示文本中markdown符号:</p> 
+<pre><code>\   反斜杠
+`   反引号
+*   星号
+_   底线
+{}  大括号
+[]  方括号
+()  括号
+#   井字号
++    加号
+-    减号
+.   英文句点
+!   惊叹号
+</code></pre> 
 <h3> <a id="user-content-code--blockquote" class="anchor" href="#code--blockquote" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>code blockquote</h3> 
-<pre><code>  ```                  &lt;pre&gt;&lt;code&gt; ... &lt;/code&gt;&lt;/pre&gt;   代码区块  
+<pre><code>  ```                  &lt;pre&gt;&lt;code&gt; ... &lt;/code&gt;&lt;/pre&gt;   代码区块，多行代码引用  
   缩进四个空格或一个制表符  &lt;pre&gt;&lt;code&gt; ... &lt;/code&gt;&lt;/pre&gt;   代码区块  
-
-  #h1                  &lt;h1&gt;&lt;/h1&gt;
-  `sum = b + c` 反引号  &lt;code&gt;   &lt;/code&gt;    行内代码
+  `sum = b + c` 反引号  &lt;code&gt;   &lt;/code&gt;    行内代码,反引号，单行代码引用
   ---  分页,水平线       &lt;hr /&gt;
   行尾两个以上空格+Enter  &lt;br /&gt;      markdown段内强制换行
-
   &gt;                    &lt;blockquote&gt; 
   使用多个&gt;，可以将&lt;blockquote&gt;嵌套，且&lt;blockquote&gt;内可以使用其它markdown语法
 
@@ -75,7 +85,7 @@ function setDocumentScrollTop(ypos)
 <h3> <a id="user-content-bolditalic--strikethrough" class="anchor" href="#bolditalic--strikethrough" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>bold,Italic &amp; strikethrough</h3> 
 <p><em>Italic</em><br /> <strong>bold</strong><br /> <strong><em>bold&amp;Italic</em></strong><br /> <del>删除线</del></p> 
 <h3> <a id="user-content-list" class="anchor" href="#list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>list</h3> 
-<p>也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符 列表支持嵌套</p> 
+<p>也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符 列表支持嵌套，每个项目前增加两个空格缩进</p> 
 <ul> 
  <li>unorder list1</li> 
  <li>unorder list2</li> 
@@ -148,6 +158,6 @@ function setDocumentScrollTop(ypos)
  </tbody> 
 </table> 
 <h3> <a id="user-content-refer" class="anchor" href="#refer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>refer</h3> 
-<p><a href="http://mahua.jser.me/">Mahua</a> markdown编辑器<br /> <a href="http://wowubuntu.com/markdown/index.html#autoescape">markdown 语法说明</a>　　 <a href="https://github.com/jpfleury/gedit-markdown">gedit-markdown</a></p>
+<p><a href="http://mahua.jser.me/">Mahua</a> markdown编辑器<br /> <a href="http://wowubuntu.com/markdown/index.html#autoescape">markdown 语法说明</a><br /> <a href="https://github.com/jpfleury/gedit-markdown">gedit-markdown</a></p>
 </body>
 </html>
