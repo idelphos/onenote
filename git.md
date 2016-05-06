@@ -1,8 +1,9 @@
-
+#git
 
 ###install Git on RHEL
 1. `yum install git`
 2.  install from source code
+
 ``` 
 refer to [README.md](https://github.com/git/git/blob/master/README.md)
 [download git source code](https://github.com/git/git/releases/)
@@ -14,7 +15,7 @@ $make all doc
 git --version   verfiy the installation
 ```
 
-####配置Ｇit
+###配置Ｇit
 git config --global user.name "Ade"
 git config --global user.email "adelphos@msn.cn"
 cat ~/.gitconfig
@@ -23,6 +24,15 @@ cat ~/.gitconfig
 ###配置[github](https://github.com）
 setting 里添加本地ssh public key
 `ssh -T git@github.com` 进行测试
+
+####免密码push
+git remote -v       查看使用的传输协议，不要使用https
+
+设置成ssh方式
+git remote rm origin
+git remote add origin git@github.com:username/repository.git
+git push -u origin master
+
 
 
 ###known git issue
