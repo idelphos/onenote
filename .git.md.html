@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>/home/yadelph/bdisk/mygit/onenote/.git.md.html</title>
+
+<link href="/var/www/html/adelphos/markdown1.css" media="all" rel="stylesheet" type="text/css"/> 
+
+
+
+<script type="text/javascript">
+
+function getDocumentScrollTop() 
+{
+   var res = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+   // alert(res);
+   return res;
+}
+
+function setDocumentScrollTop(ypos) 
+{
+	window.scrollTo(0, ypos);
+}
+
+</script>
+
+
+</head>
+<body class="markdown-body">
+<h1> <a id="user-content-git" class="anchor" href="#git" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git</h1> 
+<p>执行git init的那个目录是working directory,而.git是版本库repository</p> 
+<h3> <a id="user-content-install-git-on-rhel" class="anchor" href="#install-git-on-rhel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://git.oschina.net/progit/1-%E8%B5%B7%E6%AD%A5.html#1.4-%E5%AE%89%E8%A3%85-Git">install Git on RHEL</a> </h3> 
+<ol> 
+ <li><code>yum install git</code></li> 
+ <li> install from source code</li> 
+</ol> 
+<blockquote> 
+ <ul> 
+  <li>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc xmlto<br /> </li> 
+  <li>refer to <a href="https://github.com/git/git/blob/master/README.md">README.md</a><br /> </li> 
+  <li> <a href="https://github.com/git/git/releases/">download git source code</a> </li> 
+  <li>tar -zxvf git-2.8.2.tar.gz<br /> cd git.2.8.2<br /> $make configure<br /> $./configure --prefix=/usr　--with-curl --with-expat　配置安装程序目录<br /> $make all doc<br /> #make install install-doc install-html; # as root<br /> git --version verfiy the installation</li> 
+ </ul> 
+</blockquote> 
+<h3> <a id="user-content-配置Ｇit" class="anchor" href="#%E9%85%8D%E7%BD%AE%EF%BC%A7it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>配置Ｇit</h3> 
+<ul> 
+ <li>/etc/gitconfig 系统级配置文件git config --system</li> 
+ <li>~/.gitconfig 用户级配置文件，适用于该用户下所有仓库配置　git config --global</li> 
+ <li>.git/config 仅针对当前仓库配置有效<br /> 配置根据就近原则覆盖上层的相同配置</li> 
+</ul> 
+<pre><code>git config --global user.name &quot;Ade&quot;
+git config --global user.email &quot;adelphos@msn.cn&quot;
+git config --list                 ＃查看配置
+</code></pre> 
+<h3> <a id="user-content-配置github" class="anchor" href="#%E9%85%8D%E7%BD%AEgithub" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>配置<a href="https://github.com">github</a> </h3> 
+<pre><code>#setting 里添加本地ssh public key
+ssh -T git@github.com    #进行测试
+git remote -v       #查看使用的传输协议，不要使用https
+
+#设置成ssh方式
+git remote rm origin
+git remote add origin git@github.com:username/repository.git
+git push -u origin master
+</code></pre> 
+<pre><code>1）git clone已存在GitHub上的Repository。（在新建的~/MyTestFolder目录中）
+
+git clone https://github.com/zhchnchn/ZhchnchnTest.git
+
+（2）修改一个文件，然后提交
+
+vim README.md
+git status
+git add README.md
+git status
+git commit -m &quot;Edit by WorkUbuntu 1204&quot;
+git status
+git remote add origin https://github.com/zhchnchn/ZhchnchnTest.git
+
+这时会报错误：
+
+fatal: remote origin already exists.
+
+解决办法【3】：
+
+$ git remote rm origin
+
+然后再次执行 git remote add origin https://github.com/zhchnchn/ZhchnchnTest.git
+
+（3）之后，需要将修改push到GitHub上
+
+git push -u origin master
+
+执行该条命令后，会要求输入GitHub账户的用户名和密码。
+
+（4）提交完成后，查看GitHub上的Repository，会发现内容修改成功。
+
+</code></pre> 
+<h3> <a id="user-content-known-git-issue" class="anchor" href="#known-git-issue" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>known git issue</h3> 
+<p>fatal: Unable to find remote helper for 'https' 无权限执行git-remote-https</p> 
+<p>PATH=$PATH:/usr/libexec/git-core./configure --prefix=/usr --with-curl --with-expat</p> 
+<p>yum install libcurl-devel 重新编译安装</p> 
+<hr /> 
+<h3> <a id="user-content-git-快速入门" class="anchor" href="#git-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git 快速入门</h3> 
+<pre><code>git help &lt;verb&gt;
+git &lt;verb&gt; --help
+man git-&lt;verb&gt;
+</code></pre> 
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git入门学习</a></p>
+</body>
+</html>
