@@ -28,7 +28,7 @@ function setDocumentScrollTop(ypos)
 </head>
 <body class="markdown-body">
 <h3> <a id="user-content-git-快速手册" class="anchor" href="#git-%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git 快速手册</h3> 
-<pre><code>git init         
+<pre><code>git init                  初始化本地文件夹,目录下建仓库.git    
 git log  
 git status  
 git commit -m &quot;comments&quot;  
@@ -36,14 +36,22 @@ git add b.txt
 git commit -a 
 git push
 git clone https://github.com/idelphos/onenote.git     克隆仓库至本地
-
+git diff          查看修改的内容
+git log　         命令显示从最近到最远的提交日志
 </code></pre> 
+<p><a href="img/git.jpg" target="_blank"><img src="img/git.jpg" alt="git-structure" style="max-width:100%;" /></a></p> 
 <h3> <a id="user-content-远程提交代码" class="anchor" href="#%E8%BF%9C%E7%A8%8B%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>远程提交代码</h3> 
-<p>新建仓库 <a href="https://github.com/idelphos/onenote.git">github</a></p> 
-<p>git init 初始化本地文件夹,目录下建仓库.git git add . 提交更改，先提交代码至缓存区, git commit -m &quot;comment&quot; 　　实际提交代码</p> 
-<p><code>git remote add origin &lt;server&gt;</code><br /> git remote add origin <a href="mailto:git@github.com">git@github.com</a>:idelphos/onenote.git 本地仓库下运行此命令，是将本地仓库连接到远程仓库，与之相关联 ｀git push origin master`<br /> git push -u origin master 将本地库的所有内容推送到远程库，实际是将当前分支master推送到远程 第一次推送时使用-u选项，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令 再次推送只需要使用命令git push origin master.</p> 
-<p><code>git add &lt;files&gt;</code> git add 可多次提交，然后使用git commit 一次提交至仓库</p> 
-<p>git status 查询仓库状态 git diff 查看修改的内容 git log　 命令显示从最近到最远的提交日志</p> 
+<p>新建仓库, <a href="https://github.com/idelphos/onenote.git">github</a></p> 
+<pre><code>git init                  #初始化本地文件夹,指定目录下建仓库.git    
+git status                #查询文件状态,仓库状态
+git add .                 #提交更改，先提交代码至缓存区,
+git commit -m &quot;comment&quot;   #实际提交代码
+git remote add bin git@github:idelphos/bin.git    　＃添加远程仓库，并指定名称bin,关联本地与远程仓库
+</code></pre> 
+<p><code>git remote add origin &lt;server&gt;</code><br /> git remote add origin <a href="mailto:git@github.com">git@github.com</a>:idelphos/onenote.git 本地仓库下运行此命令，是将本地仓库连接到远程仓库，与之相关联</p> 
+<p>｀git push origin master`<br /> git push -u origin master 将本地库的所有内容推送到远程库，实际是将当前分支master推送到远程 第一次推送时使用-u选项，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令 再次推送只需要使用命令git push origin master.</p> 
+<p><code>git add &lt;files&gt;</code><br /> git add 可多次提交，然后使用git commit 一次提交至仓库</p> 
+<p><code>git commit</code></p> 
 <p>git clone <a href="mailto:git@github.com">git@github.com</a>:idelphos/onenote.git 将远程仓库克隆到本地</p> 
 <h3> <a id="user-content-版本回退与前滚" class="anchor" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80%E4%B8%8E%E5%89%8D%E6%BB%9A" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>版本回退与前滚</h3> 
 <p>HEAD指向版本的当前版本 git reset --hard commit_id git log 　可以查看提交历史（的commit_id） git reflog 可以查看历史命令，以确定要回到未来的哪个版本</p> 
